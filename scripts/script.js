@@ -31,12 +31,14 @@ projectButtons.forEach(button => {
     // Clear the grid
     projectGrid.innerHTML = '';
 
-    // Add new images to the grid
-    images.forEach(image => {
-      const projectItem = document.createElement('div');
-      projectItem.classList.add('project-item');
-      projectItem.innerHTML = `<img src="${image}" alt="${projectType} Project">`;
-      projectGrid.appendChild(projectItem);
+    // Add new images to the grid with a slight delay for smooth fade-in
+    images.forEach((image, index) => {
+      setTimeout(() => {
+        const projectItem = document.createElement('div');
+        projectItem.classList.add('project-item');
+        projectItem.innerHTML = `<img src="${image}" alt="${projectType} Project">`;
+        projectGrid.appendChild(projectItem);
+      }, index * 100); // Add a 100ms delay between each image
     });
   });
 });

@@ -178,12 +178,14 @@ nav ul li a:hover {
   padding: 20px;
 }
 
+
 .project-item {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out; /* Add fade-in animation */
 }
 
 .project-item img {
