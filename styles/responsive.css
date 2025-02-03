@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+  header .logo img {
+    height: 40px; /* Smaller logo for mobile */
+  }
+
+  .project-images {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-selector {
+    flex-direction: column;
+  }
+}

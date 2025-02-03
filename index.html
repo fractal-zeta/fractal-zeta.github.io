@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Zeta Labs | Home</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Tech Company Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Innovating the Future</h2>
+      <p>We build cutting-edge technology solutions for businesses worldwide.</p>
+      <a href="#projects" class="btn">Explore Our Projects</a>
+    </div>
+  </section>
+
+
+<!-- Smooth Sinusoidal Wave Pattern Separator -->
+<div class="wave-separator">
+  <svg viewBox="0 0 2400 120" preserveAspectRatio="none">
+    <!-- Left to right moving wave -->
+    <path class="wave-left" d="M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 C1350,120 1650,0 1800,60 C1950,120 2250,0 2400,60 V120 H0 Z" fill="#1a1a1a" />
+    <!-- Right to left moving wave -->
+    <path class="wave-right" d="M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 C1350,120 1650,0 1800,60 C1950,120 2250,0 2400,60 V120 H0 Z" fill="#1a1a1a" />
+  </svg>
+</div>
+
+ <section id="about" class="about">
+  <div class="container">
+    <h2 class="fade-in">About Us</h2>
+    <p class="fade-in">We are a team of passionate engineers, designers, and innovators dedicated to creating technology that transforms industries.</p>
+  </div>
+</section>
+
+  <section id="services" class="services">
+  <div class="container">
+    <h2 class="fade-in">Our Services</h2>
+    <div class="service-grid">
+      <div class="service-item slide-in-left">
+        <h3>Web Development</h3>
+        <p>We create modern, responsive, and user-friendly websites.</p>
+      </div>
+      <div class="service-item zoom-in">
+        <h3>Mobile Apps</h3>
+        <p>We build cross-platform mobile applications for iOS and Android.</p>
+      </div>
+      <div class="service-item slide-in-right">
+        <h3>AI Solutions</h3>
+        <p>We develop AI-powered tools to automate and optimize your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>Our Projects</h2>
+    <div class="project-selector">
+      <button class="project-btn active" data-project="web">Web Development</button>
+      <button class="project-btn" data-project="mobile">Mobile Apps</button>
+      <button class="project-btn" data-project="ai">AI Solutions</button>
+    </div>
+    <div class="project-display">
+      <button class="scroll-arrow left-arrow">&larr;</button>
+      <div class="project-images">
+        <!-- Images will be dynamically inserted here -->
+      </div>
+      <button class="scroll-arrow right-arrow">&rarr;</button>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="team">
+  <div class="container">
+    <h2 class="fade-in">Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member slide-in-left">
+        <img src="assets/images/team1.jpg" alt="Team Member 1">
+        <div class="team-member-overlay">
+          <a href="https://www.linkedin.com/in/johndoe" target="_blank" class="linkedin-icon">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+        </div>
+        <h3>John Doe</h3>
+        <p>CEO & Founder</p>
+      </div>
+      <div class="team-member zoom-in">
+        <img src="assets/images/team2.jpg" alt="Team Member 2">
+        <div class="team-member-overlay">
+          <a href="https://www.linkedin.com/in/janesmith" target="_blank" class="linkedin-icon">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+        </div>
+        <h3>Jane Smith</h3>
+        <p>Lead Developer</p>
+      </div>
+      <div class="team-member slide-in-right">
+        <img src="assets/images/team3.jpg" alt="Team Member 3">
+        <div class="team-member-overlay">
+          <a href="https://www.linkedin.com/in/mikejohnson" target="_blank" class="linkedin-icon">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+        </div>
+        <h3>Mike Johnson</h3>
+        <p>Designer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="blog" class="blog">
+    <div class="container">
+      <h2>Blog</h2>
+      <div class="blog-grid">
+        <div class="blog-post">
+          <h3>Top Web Development Trends in 2023</h3>
+          <p>Discover the latest trends shaping the future of web development.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="blog-post">
+          <h3>How AI is Transforming Businesses</h3>
+          <p>Learn how AI is revolutionizing industries worldwide.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="blog-post">
+          <h3>Building Scalable Mobile Apps</h3>
+          <p>Best practices for creating scalable and efficient mobile apps.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have a project in mind? Let’s talk!</p>
+      <a href="mailto:info@techcompany.com" class="btn">Email Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Tech Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
