@@ -546,3 +546,39 @@ header .logo img {
 .linkedin-icon:hover img {
   transform: scale(1.2); /* Zoom effect on icon hover */
 }
+
+/* Heading text sliders */
+.text-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* Adjust to match text size */
+  overflow: hidden;
+  position: relative;
+}
+
+.text-slider .text {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: slideText 9s infinite;
+  opacity: 0;
+}
+
+.text-slider .text:nth-child(1) {
+  animation-delay: 0s;
+}
+.text-slider .text:nth-child(2) {
+  animation-delay: 3s;
+}
+.text-slider .text:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes slideText {
+  0% { opacity: 0; transform: translateX(100%); }
+  10%, 30% { opacity: 1; transform: translateX(0); }
+  40% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 0; }
+}
