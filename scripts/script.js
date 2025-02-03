@@ -8,9 +8,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Dynamic project section with smooth transitions
+// Dynamic project section
 const projectButtons = document.querySelectorAll('.project-btn');
-const projectImagesContainer = document.querySelector('.project-images');
+const projectGrid = document.querySelector('.project-grid');
 
 const projectImages = {
   web: ['assets/images/web1.jpg', 'assets/images/web2.jpg', 'assets/images/web3.jpg', 'assets/images/web4.jpg', 'assets/images/web2.jpg', 'assets/images/web3.jpg', 'assets/images/web4.jpg'],
@@ -28,39 +28,42 @@ projectButtons.forEach(button => {
     const projectType = button.getAttribute('data-project');
     const images = projectImages[projectType];
 
-    // Fade out current images
-    projectImagesContainer.style.opacity = 0;
+    // Clear the grid
+    projectGrid.innerHTML = '';
 
-    // Wait for fade-out to complete, then update images
-    setTimeout(() => {
-      projectImagesContainer.innerHTML = images
-        .map(image => `<img src="${image}" alt="${projectType} Project">`)
-        .join('');
-      // Fade in new images
-      projectImagesContainer.style.opacity = 1;
-    }, 300); // Match the transition duration in CSS
+    // Add new images to the grid
+    images.forEach(image => {
+      const projectItem = document.createElement('div');
+      projectItem.classList.add('project-item');
+      projectItem.innerHTML = `<img src="${image}" alt="${projectType} Project">`;
+      projectGrid.appendChild(projectItem);
+    });
   });
 });
 
 // Set the default project area to "web"
 document.querySelector('.project-btn[data-project="web"]').click();
 
-// Scroll functionality for arrows
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
+// Click-to-zoom functionality
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('modal-image');
+const closeBtn = document.querySelector('.close');
 
-leftArrow.addEventListener('click', () => {
-  projectImagesContainer.scrollBy({
-    left: -300, // Scroll by the width of one image
-    behavior: 'smooth'
-  });
+projectGrid.addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG') {
+    modal.style.display = 'flex';
+    modalImg.src = e.target.src;
+  }
 });
 
-rightArrow.addEventListener('click', () => {
-  projectImagesContainer.scrollBy({
-    left: 300, // Scroll by the width of one image
-    behavior: 'smooth'
-  });
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
 });
 
 
